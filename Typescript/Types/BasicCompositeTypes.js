@@ -1,34 +1,36 @@
+"use strict";
+exports.__esModule = true;
+var basic = require("../Basic");
 /*
 * Arrays (Basic Type)
 */
-console.log('\n****** Array Type ********');
+basic.printHeader('Array');
 // Boolean Array
 var booleanArray = [true, false, true, true];
 // number array
 var numberArray = [12, 55, 0xff, 7, 34e2];
-console.log('The second element: ' + booleanArray[1]);
-console.log('Array length: ' + booleanArray.length);
+basic.printValue2('The second element', booleanArray[1]);
+basic.printValue2('Array length', booleanArray.length);
 // Reassign
-console.log('****** Reassign boolean array');
+basic.printHeader('Reassign Array');
 booleanArray = [false, true];
-console.log('The second element: ' + booleanArray[1]);
-console.log('Array length: ' + booleanArray.length);
-console.log('****** number array');
-console.log(numberArray);
+basic.printValue2('The second element', booleanArray[1]);
+basic.printValue2('Array length', booleanArray.length);
+basic.printValue({ numberArray: numberArray });
 /*
 * Tuples (Basic Type)
 */
-console.log('\n****** Tuple Type ********');
+basic.printHeader('Tuple');
 var tupleArray = ["Hello", 20, true, 11];
-console.log("Tuple array: ", tupleArray);
+basic.printValue({ tupleArray: tupleArray });
 var tupleTypeData = [true, "Tuple type"];
-console.log("Tuple Type: ", tupleTypeData);
+basic.printValue({ tupleTypeData: tupleTypeData });
 var interfaceTupleData = [90, false];
-console.log("Tuple Interface Type: ", interfaceTupleData);
+basic.printValue({ interfaceTupleData: interfaceTupleData });
 /*
 * Enum (Basic Type)
 */
-console.log('\n****** Enum Type ********');
+basic.printHeader('Enum');
 var ECar;
 (function (ECar) {
     ECar[ECar["Maruti"] = 0] = "Maruti";
@@ -37,5 +39,5 @@ var ECar;
 })(ECar || (ECar = {}));
 ;
 var enumCarObj = ECar.Honda;
-console.log('Enum type (value): ', enumCarObj);
-console.log('Enum type (name): ', ECar[enumCarObj]);
+basic.printValue2('Enum type (value): ', enumCarObj);
+basic.printValue2('Enum type (name): ', ECar[enumCarObj]);

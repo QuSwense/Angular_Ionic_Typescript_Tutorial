@@ -2,11 +2,12 @@
 * Example of Typescript 2.5 Data Types Part 2
 * Compile with tsc --target es6
 */
+import * as basic from '../Basic';
 
 /*
 * Symbol Types
 */
-console.log('****** Symbol Primitive Type ********');
+basic.printHeaderPrimitiveType('Symbol');
 
 // Declare a symbol
 let symbolDefault: symbol = Symbol();
